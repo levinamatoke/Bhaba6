@@ -956,12 +956,12 @@ app.use((err, req, res, next) => {
 });
 
 // Serve static files from React in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../my-app/build')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../my-app/build', 'index.html'));
-  });
-}
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, '../my-app/build')));
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../my-app/build', 'index.html'));
+//   });
+// }
 
 // Start server
 app.listen(PORT, () => {
